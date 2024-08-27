@@ -1,0 +1,106 @@
+.schedule {
+  display: grid;
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-tert);
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border-divisor);
+
+    & strong {
+      font: var(--label-lg);
+      color: var(--content-primary);
+    }
+
+    & span {
+      font: var(--label-lg);
+      color: var(--content-secondary);
+    }
+
+    & .period {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+
+  & ul {
+    padding: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+
+    & li {
+      display: grid;
+      align-items: center;
+      gap: 0.5rem;
+
+      border-bottom: 1px solid var(--border-divisor);
+      padding-bottom: 1rem;
+
+      & .scheduledClients {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+
+        & h3 {
+          font: var(--label-sm);
+          color: var(--content-primary);
+        }
+
+        & p {
+          font: var(--p-sm);
+          color: var(--content-secondary);
+
+          & strong {
+            font: var(--label-sm);
+            color: var(--content-primary);
+          }
+        }
+      }
+
+      & span {
+        font: var(--p-sm);
+        color: var(--content-secondary);
+      }
+
+      & button {
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+        font: var(--p-sm);
+        color: var(--content-tertiary);
+        border: none;
+
+        &:hover {
+          color: var(--content-primary);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (width > 64em) {
+  .schedule {
+    & ul {
+      & li {
+        display: flex;
+        gap: none;
+        justify-content: space-between;
+        padding: 1rem;
+
+        & .scheduledClients {
+          flex-wrap: nowrap;
+          gap: none;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}

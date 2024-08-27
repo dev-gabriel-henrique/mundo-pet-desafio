@@ -1,0 +1,51 @@
+#scheduleTop {
+  display: grid;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+
+  & .title {
+    display: grid;
+    gap: 0.25rem;
+
+    & h1 {
+      font: 700 1.5rem/2rem "Inter Tight" sans-serif;
+      color: var(--content-primary);
+    }
+
+    & p {
+      font: var(--p-md);
+      color: var(--content-secondary);
+    }
+  }
+
+  & form {
+    & fieldset {
+      border: none;
+
+      & input[type="date"] {
+        background-color: transparent;
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        height: 3rem;
+
+        color: var(--content-secondary);
+        font: 400 1rem/150% var(--inter);
+
+        border: 1px solid var(--border-prim);
+
+        &::-webkit-calendar-picker-indicator {
+          background-image: url(../assets/calendar.svg);
+          
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 64em) {
+  #scheduleTop {
+    display: flex;
+    align-items: center;
+  }
+}

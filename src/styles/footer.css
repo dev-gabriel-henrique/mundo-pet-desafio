@@ -1,0 +1,34 @@
+footer {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background-color: var(--bg-tert);
+  display: flex;
+  justify-content: center;
+
+  & button {
+    padding: .75rem 1.5rem;
+    background-color: var(--content-brand);
+    border-radius: .5rem;
+    border: none;
+    text-transform: uppercase;
+
+    font: var(--label-lg);
+    color: #050505;
+    box-shadow: 0px 0px 25px 0px rgba(146,130,250,1);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--bg-high);
+      box-shadow: 0px 0px 25px 0px rgba(189,180,250,1);
+    }
+  }
+}
+
+@media (width > 64em) {
+  footer {
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/assets/dog.svg" type="image/x-icon" />
+    <title>Mundo Pet</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body>
+    <header class="logo">
+      <img src="./src/assets/dog.svg" alt="Ícone da face de um cachorro" />
+      <h1>Mundo Pet</h1>
+    </header>
+
+    <main>
+      <section id="scheduleTop">
+        <div class="title grid">
+          <h1>Sua Agenda</h1>
+          <p>
+            Aqui você pode ver todos os clientes e serviços agendados para hoje.
+          </p>
+        </div>
+
+        <form>
+          <fieldset>
+            <input type="date" id="initialCalendar" />
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="scheduleMorning" class="schedule">
+        <header>
+          <div class="period">
+            <svg
+              id="svgMorning"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_3128_707)">
+                <path
+                  d="M3.28809 16.0623C3.28809 15.7036 3.57887 15.4128 3.93757 15.4128H16.0623C16.421 15.4128 16.7117 15.7036 16.7117 16.0623C16.7117 16.421 16.421 16.7118 16.0623 16.7118H3.93757C3.57887 16.7118 3.28809 16.421 3.28809 16.0623Z"
+                  fill="#027DF0"
+                />
+                <path
+                  d="M4.15417 10C4.15417 11.0201 4.41582 11.9796 4.8753 12.8146H15.1246C15.5842 11.9796 15.8458 11.0201 15.8458 10C15.8458 6.77143 13.2285 4.15417 10 4.15417C6.77143 4.15417 4.15417 6.77143 4.15417 10Z"
+                  fill="#027DF0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.88623 18.6604C5.88623 18.3017 6.17709 18.011 6.53579 18.011H13.4641C13.8228 18.011 14.1137 18.3017 14.1137 18.6604C14.1137 19.0191 13.8228 19.31 13.4641 19.31H6.53579C6.17709 19.31 5.88623 19.0192 5.88623 18.6604Z"
+                  fill="#16487A"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.99994 0.690002C10.3586 0.690002 10.6495 0.980782 10.6495 1.33956V2.20557C10.6495 2.56427 10.3586 2.85513 9.99994 2.85513C9.64124 2.85513 9.35038 2.56427 9.35038 2.20557V1.33956C9.35038 0.980782 9.64124 0.690002 9.99994 0.690002ZM0.689941 10C0.689941 9.6413 0.980721 9.35044 1.3395 9.35044H2.20551C2.56421 9.35044 2.85507 9.6413 2.85507 10C2.85507 10.3587 2.56421 10.6496 2.20551 10.6496H1.3395C0.980721 10.6496 0.689941 10.3587 0.689941 10ZM17.1448 10C17.1448 9.6413 17.4357 9.35044 17.7944 9.35044H18.6604C19.0192 9.35044 19.3099 9.6413 19.3099 10C19.3099 10.3587 19.0192 10.6496 18.6604 10.6496H17.7944C17.4357 10.6496 17.1448 10.3587 17.1448 10Z"
+                  fill="#16487A"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.87525 12.8146H1.3395C0.980721 12.8146 0.689941 13.1055 0.689941 13.4642C0.689941 13.8229 0.980721 14.1137 1.3395 14.1137H18.6604C19.0192 14.1137 19.3099 13.8229 19.3099 13.4642C19.3099 13.1055 19.0192 12.8146 18.6604 12.8146H4.87525Z"
+                  fill="#16487A"
+                />
+                <path
+                  d="M3.41656 3.41665C3.67021 3.163 4.08148 3.163 4.33513 3.41665L4.67531 3.75683C4.92896 4.01048 4.92896 4.42175 4.67531 4.6754C4.42166 4.92905 4.01039 4.92905 3.75674 4.6754L3.41656 4.33522C3.16291 4.08157 3.16291 3.6703 3.41656 3.41665Z"
+                  fill="#027DF0"
+                />
+                <path
+                  d="M16.5826 3.41665C16.8362 3.6703 16.8362 4.08157 16.5826 4.33522L16.2424 4.6754C15.9888 4.92905 15.5775 4.92905 15.3238 4.6754C15.0701 4.42175 15.0701 4.01048 15.3238 3.75683L15.664 3.41665C15.9177 3.163 16.3289 3.163 16.5826 3.41665Z"
+                  fill="#027DF0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_3128_707">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <strong>Manhã</strong>
+          </div>
+
+          <span>09h-12h</span>
+        </header>
+
+        <ul role="list">
+          <li class="clients">
+            <div class="scheduledClients">
+              <h3>09:00</h3>
+
+              <p><strong>Thor</strong> / Fernanda Costa</p>
+            </div>
+
+            <span>Vacinação</span>
+
+            <button class="removeScheduling">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section id="scheduleAfternoon" class="schedule">
+        <header>
+          <div class="period">
+            <svg
+              id="svgAfternoon"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.88772 6.74711C9.88772 8.48166 8.48156 9.88782 6.74702 9.88782C5.01248 9.88782 3.60632 8.48166 3.60632 6.74711C3.60632 5.01257 5.0124 3.60641 6.74702 3.60641C8.48164 3.60641 9.88772 5.01249 9.88772 6.74711Z"
+                fill="#F09102"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.29835 0.690002C6.67003 0.690002 6.97142 0.991311 6.97142 1.363V1.81171C6.97142 2.1834 6.67003 2.48471 6.29835 2.48471C5.92666 2.48471 5.62535 2.1834 5.62535 1.81171V1.363C5.62535 0.991311 5.92666 0.690002 6.29835 0.690002ZM2.33289 2.33271C2.59572 2.06988 3.0218 2.06988 3.28463 2.33271L3.47851 2.52659C3.74134 2.78942 3.74134 3.2155 3.47851 3.47833C3.21567 3.74116 2.7896 3.74116 2.52677 3.47833L2.33289 3.28445C2.07005 3.02162 2.07005 2.59554 2.33289 2.33271ZM10.2638 2.33279C10.5266 2.59562 10.5266 3.02178 10.2638 3.28461L10.0698 3.47849C9.80701 3.74132 9.38094 3.74132 9.1181 3.47849C8.85527 3.21566 8.85527 2.7895 9.1181 2.52667L9.31198 2.33279C9.57482 2.06996 10.001 2.06996 10.2638 2.33279ZM0.689941 6.29841C0.689941 5.92672 0.99125 5.62541 1.36294 5.62541H1.81165C2.18334 5.62541 2.48465 5.92672 2.48465 6.29841C2.48465 6.67009 2.18334 6.97148 1.81165 6.97148H1.36294C0.99125 6.97148 0.689941 6.67009 0.689941 6.29841ZM3.47851 9.11856C3.74134 9.38139 3.74134 9.80755 3.47851 10.0704L3.28463 10.2642C3.0218 10.527 2.59572 10.527 2.33289 10.2642C2.07005 10.0013 2.07005 9.57519 2.33289 9.31244L2.52677 9.11856C2.7896 8.85573 3.21567 8.85573 3.47851 9.11856Z"
+                fill="#F09102"
+              />
+              <path
+                d="M14.1822 19.31C17.0142 19.31 19.3099 17.0413 19.3099 14.2426C19.3099 12.0245 17.8679 10.1393 15.8597 9.45265C15.5744 6.92098 13.4017 4.95242 10.7637 4.95242C7.93177 4.95242 5.63601 7.22118 5.63601 10.0198C5.63601 10.6388 5.74835 11.2319 5.95395 11.7802C5.71281 11.7334 5.46367 11.7089 5.20875 11.7089C3.08471 11.7089 1.36292 13.4105 1.36292 15.5095C1.36292 17.6085 3.08471 19.31 5.20867 19.31H14.1822Z"
+                fill="#75501B"
+              />
+            </svg>
+
+            <strong>Tarde</strong>
+          </div>
+
+          <span>13h-18h</span>
+        </header>
+
+        <ul role="list">
+          <li class="clients">
+            <div class="scheduledClients">
+              <h3>13:00</h3>
+
+              <p><strong>Mel </strong> / João Souza</p>
+            </div>
+
+            <span>Corte de Unha</span>
+
+            <button class="removeScheduling">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <section id="scheduleNight" class="schedule">
+        <header>
+          <div class="period">
+            <svg
+              id="svgNight"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.99986 19.3099C15.1416 19.3099 19.3098 15.1417 19.3098 9.99998C19.3098 9.56924 18.6642 9.49799 18.4413 9.86667C17.3816 11.6204 15.4569 12.793 13.2584 12.793C9.91618 12.793 7.20686 10.0837 7.20686 6.74148C7.20686 4.54295 8.3794 2.61817 10.1332 1.55844C10.5019 1.33567 10.4306 0.690063 9.99986 0.690063C4.85815 0.690063 0.689941 4.85827 0.689941 9.99998C0.689941 15.1417 4.85815 19.3099 9.99986 19.3099Z"
+                fill="#F0DC02"
+              />
+              <path
+                d="M17.3547 0.976073C17.2049 0.594727 16.6672 0.594727 16.5174 0.976073L16.1167 1.99574C16.071 2.11219 15.9792 2.20434 15.8632 2.25026L14.8472 2.65243C14.4673 2.80276 14.4673 3.34244 14.8472 3.49286L15.8632 3.89503C15.9792 3.94094 16.071 4.03309 16.1167 4.14947L16.5174 5.16921C16.6672 5.55048 17.2049 5.55048 17.3547 5.16921L17.7555 4.14947C17.8011 4.03309 17.893 3.94094 18.009 3.89503L19.025 3.49286C19.4049 3.34244 19.4049 2.80276 19.025 2.65243L18.009 2.25026C17.893 2.20434 17.8011 2.11219 17.7555 1.99574L17.3547 0.976073Z"
+                fill="#756E1B"
+              />
+              <path
+                d="M13.7544 6.39654C13.6045 6.0152 13.0669 6.0152 12.917 6.39654L12.7709 6.76831C12.7252 6.88477 12.6334 6.97691 12.5174 7.02283L12.147 7.16945C11.7671 7.31987 11.7671 7.85946 12.147 8.00988L12.5174 8.1565C12.6334 8.20241 12.7252 8.29457 12.7709 8.41102L12.917 8.78279C13.0669 9.16413 13.6045 9.16413 13.7544 8.78279L13.9005 8.41102C13.9462 8.29457 14.038 8.20241 14.154 8.1565L14.5245 8.00988C14.9044 7.85946 14.9044 7.31987 14.5245 7.16945L14.154 7.02283C14.038 6.97691 13.9462 6.88477 13.9005 6.76831L13.7544 6.39654Z"
+                fill="#756E1B"
+              />
+            </svg>
+
+            <strong>Noite</strong>
+          </div>
+
+          <span>19h-21h</span>
+        </header>
+
+        <ul role="list">
+          <li>
+            <div class="scheduledClients">
+              <h3>20:00</h3>
+
+              <p><strong>Max </strong> / Camila Santos</p>
+            </div>
+
+            <span>Limpeza de dentes</span>
+
+            <button class="removeScheduling">Remover agendamento</button>
+          </li>
+        </ul>
+      </section>
+
+      <dialog id="modal" role="dialog">
+        <header>
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </header>
+        <form method="dialog">
+          <fieldset>
+            <div class="input-wrapper">
+              <label for="name">Nome do tutor</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Insira seu nome aqui!"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="petName">Nome do pet</label>
+              <input
+                type="text"
+                id="petName"
+                name="petName"
+                placeholder="Insira o nome de seu pet aqui!"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="name">Telefone</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="text-wrapper">
+              <label for="description">Descrição do serviço</label>
+              <textarea
+                name="description"
+                id="description"
+                maxlength="20"
+                placeholder="Banho e tosa"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="data-wrapper">
+              <label for="date">Data</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="data-wrapper">
+              <label for="time">Hora</label>
+              <input type="time" id="time" name="time" />
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="button-wrapper">
+        <button id="schedule">Agendar</button>
+        </div>
+      </dialog>
+    </main>
+
+    <footer>
+      <button id="newSchedule">Novo Agendamento</button>
+    </footer>
+  </body>
+</html>

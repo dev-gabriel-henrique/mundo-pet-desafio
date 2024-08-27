@@ -1,0 +1,192 @@
+dialog {
+  position: absolute;
+  top: 0;
+
+  margin: auto;
+  max-width: 90%;
+
+  transform: scale(.9) translateY(-4%);
+
+  background-color: var(--bg-tert);
+  border: none;
+  border-radius: 0.75rem;
+
+  padding: 2.5rem 1.25rem;
+
+  & header {
+    display: grid;
+    gap: 0.25rem;
+    margin-bottom: 1.75rem;
+
+    & h1 {
+      font: 700 1.5rem/2rem "Inter Tight", sans-serif;
+      color: var(--content-primary);
+    }
+
+    & p {
+      font: var(--p-md);
+      color: var(--content-secondary);
+    }
+  }
+
+  & form {
+    & fieldset {
+      border: none;
+
+      & .input-wrapper {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        & label {
+          font: var(--label-md);
+          color: var(--content-primary);
+        }
+
+        & input {
+          background: transparent;
+          border: 1px solid var(--border-prim);
+          border-radius: 0.5rem;
+
+          padding: 0.75rem;
+          height: 3rem;
+
+          font: 400 1rem/1.5 var(--inter);
+          color: var(--content-primary);
+
+          &:hover {
+            border: 1px solid var(--border-secon);
+          }
+
+          &:active {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &::placeholder {
+            font: 400 1rem/1.5rem var(--inter);
+            color: var(--content-secondary);
+          }
+        }
+      }
+
+      & .text-wrapper {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        & label {
+          font: var(--label-md);
+          color: var(--content-primary);
+        }
+
+        & textarea {
+          background-color: transparent;
+          border: 1px solid var(--border-prim);
+          border-radius: 0.5rem;
+
+          padding: 0.75rem;
+          height: 5rem;
+
+          font: 400 1rem/1.5 var(--inter);
+          color: var(--content-primary);
+
+          &:hover {
+            border: 1px solid var(--border-secon);
+          }
+
+          &:active {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &::placeholder {
+            font: 400 1rem/1.5rem var(--inter);
+            color: var(--content-secondary);
+          }
+        }
+      }
+
+      & .data-wrapper {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        & label {
+          font: var(--label-md);
+          color: var(--content-primary);
+        }
+
+        & input {
+          background: transparent;
+          border: 1px solid var(--border-prim);
+          border-radius: 0.5rem;
+
+          padding: 0.75rem;
+          height: 3rem;
+
+          font: 400 1rem/1.5 var(--inter);
+          color: var(--content-primary);
+
+          &:hover {
+            border: 1px solid var(--border-secon);
+          }
+
+          &:active {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &::placeholder {
+            font: 400 1rem/1.5rem var(--inter);
+            color: var(--content-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  & .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    & button {
+      margin-top: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      max-width: 8rem;
+
+      background-color: var(--content-brand);
+      border-radius: 0.5rem;
+      border: none;
+
+      font: var(--label-lg);
+      color: #050505;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--bg-high);
+      }
+    }
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, .5);
+    filter: blur(50px);
+  }
+}

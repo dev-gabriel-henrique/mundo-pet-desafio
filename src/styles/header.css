@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  background-color: #2E2C30;
+
+  padding: .75rem 1.25rem;
+  width: fit-content;
+  height: 3rem;
+  border-bottom-right-radius: 12px;
+
+  color: var(--content-brand);
+  font: 700 1rem/1.5rem "Familjen Grotesk", sans-serif;
+  text-transform: uppercase;
+
+  margin-bottom: .5rem;
+}

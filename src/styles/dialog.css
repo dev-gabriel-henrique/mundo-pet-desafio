@@ -5,13 +5,30 @@ dialog {
   margin: auto;
   max-width: 90%;
 
-  transform: scale(.9) translateY(-4%);
+  transform: scale(0.9) translateY(-4%);
 
   background-color: var(--bg-tert);
   border: none;
   border-radius: 0.75rem;
 
   padding: 2.5rem 1.25rem;
+
+  & button#closeModal {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+      & svg path {
+        fill: var(--bg-high);
+      }
+    }
+  }
 
   & header {
     display: grid;
@@ -48,7 +65,7 @@ dialog {
           border: 1px solid var(--border-prim);
           border-radius: 0.5rem;
 
-          padding: 0.75rem;
+          padding: 0.75rem 2.5rem;
           height: 3rem;
 
           font: 400 1rem/1.5 var(--inter);
@@ -72,6 +89,24 @@ dialog {
             font: 400 1rem/1.5rem var(--inter);
             color: var(--content-secondary);
           }
+        }
+
+        & input#name {
+          background: url(../assets/user.svg) no-repeat;
+          background-position: .75rem;
+          background-size: 20px;
+        }
+
+        & input#petName {
+          background: url(../assets/paw.svg) no-repeat;
+          background-position: .75rem;
+          background-size: 20px;
+        }
+
+        & input#tel {
+          background: url(../assets/phone.svg) no-repeat;
+          background-position: .75rem;
+          background-size: 20px;
         }
       }
 
@@ -121,17 +156,20 @@ dialog {
         display: grid;
         gap: 0.5rem;
         margin-bottom: 1rem;
+        position: relative;
+
         & label {
           font: var(--label-md);
           color: var(--content-primary);
         }
 
-        & input {
-          background: transparent;
+        & input[type="date"] {
+          background: url(../assets/calendar.svg) no-repeat transparent;
+          background-position: .75rem;
           border: 1px solid var(--border-prim);
           border-radius: 0.5rem;
 
-          padding: 0.75rem;
+          padding: 0.75rem 2.5rem;
           height: 3rem;
 
           font: 400 1rem/1.5 var(--inter);
@@ -155,8 +193,79 @@ dialog {
             font: 400 1rem/1.5rem var(--inter);
             color: var(--content-secondary);
           }
+          
+          &::-webkit-calendar-picker-indicator {
+            background: url(../assets/arrowBottom.svg);
+            position: absolute;
+            right: .75rem;
+          }
         }
       }
+
+      & .select-wrapper {
+        position: relative;
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        & label {
+          font: var(--label-md);
+          color: var(--content-primary);
+        }
+
+        & select {
+          background: url(../assets/clock.svg) no-repeat transparent;
+          background-position: 0.75rem;
+
+          border: 1.5px solid var(--border-prim);
+          border-radius: 0.5rem;
+
+          padding: 0.55rem 2.5rem;
+          height: 3rem;
+
+          appearance: none;
+
+          font: 400 1rem/1.5 var(--inter);
+          color: var(--content-primary);
+          cursor: pointer;
+
+          &:hover {
+            border: 1.5px solid var(--border-secon);
+          }
+
+          &:active {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid var(--content-brand);
+          }
+
+          & option {
+            background-color: var(--bg-tert);
+            color: var(--content-primary);
+            font: 400 1rem/1.5 var(--inter);
+
+            &:hover {
+              background-color: none;
+            }
+          }
+        }
+
+        & .dropdown {
+          background: url(../assets/arrowBottom.svg);
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 57%;
+          right: 0.75rem;
+  
+          z-index: 2;
+        }
+      }
+
     }
   }
 
@@ -186,7 +295,17 @@ dialog {
   }
 
   &::backdrop {
-    background: rgba(0, 0, 0, .5);
-    filter: blur(50px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+  }
+
+  &::-webkit-scrollbar {
+    background-color: var(--content-tertiary);
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-secon);
+    border-radius: 5px;
   }
 }

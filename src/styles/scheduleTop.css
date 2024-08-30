@@ -24,19 +24,24 @@
       border: none;
 
       & input[type="date"] {
-        background-color: transparent;
-        padding: 1.25rem;
+        background: url(../assets/calendar.svg) no-repeat transparent;
+        background-position: .75rem;
+        padding: 1.25rem 2.5rem;
         border-radius: 0.5rem;
+        width: 10.75rem;
         height: 3rem;
+        
+        position: relative;
 
         color: var(--content-secondary);
-        font: 400 1rem/150% var(--inter);
+        font: 400 .875rem/150% var(--inter);
 
         border: 1px solid var(--border-prim);
 
         &::-webkit-calendar-picker-indicator {
-          background-image: url(../assets/calendar.svg);
-          
+          background-image: url(../assets/arrowBottom.svg);
+          position: absolute;
+          right: .75rem;
         }
       }
     }

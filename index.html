@@ -12,8 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
   <body>
     <header class="logo">
@@ -23,7 +21,7 @@
 
     <main>
       <section id="scheduleTop">
-        <div class="title grid">
+        <div class="title">
           <h1>Sua Agenda</h1>
           <p>
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
@@ -37,7 +35,7 @@
         </form>
       </section>
 
-      <section id="scheduleMorning" class="schedule">
+      <section class="schedule">
         <header>
           <div class="period">
             <svg
@@ -97,22 +95,11 @@
           <span>09h-12h</span>
         </header>
 
-        <ul role="list">
-          <li class="clients">
-            <div class="scheduledClients">
-              <h3>09:00</h3>
-
-              <p><strong>Thor</strong> / Fernanda Costa</p>
-            </div>
-
-            <span>Vacinação</span>
-
-            <button class="removeScheduling">Remover agendamento</button>
-          </li>
+        <ul class="clientSchedule" id="scheduleMorning" role="list">
         </ul>
       </section>
 
-      <section id="scheduleAfternoon" class="schedule">
+      <section class="schedule">
         <header>
           <div class="period">
             <svg
@@ -145,22 +132,11 @@
           <span>13h-18h</span>
         </header>
 
-        <ul role="list">
-          <li class="clients">
-            <div class="scheduledClients">
-              <h3>13:00</h3>
-
-              <p><strong>Mel </strong> / João Souza</p>
-            </div>
-
-            <span>Corte de Unha</span>
-
-            <button class="removeScheduling">Remover agendamento</button>
-          </li>
+        <ul class="clientSchedule" id="scheduleAfternoon" role="list">
         </ul>
       </section>
 
-      <section id="scheduleNight" class="schedule">
+      <section class="schedule">
         <header>
           <div class="period">
             <svg
@@ -191,27 +167,32 @@
           <span>19h-21h</span>
         </header>
 
-        <ul role="list">
-          <li>
-            <div class="scheduledClients">
-              <h3>20:00</h3>
-
-              <p><strong>Max </strong> / Camila Santos</p>
-            </div>
-
-            <span>Limpeza de dentes</span>
-
-            <button class="removeScheduling">Remover agendamento</button>
-          </li>
+        <ul class="clientSchedule" id="scheduleNight" role="list">
         </ul>
       </section>
 
       <dialog id="modal" role="dialog">
+        <button id="closeModal">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.99986 8.49638L2.34474 13.1633C2.12936 13.377 1.87799 13.4839 1.59056 13.4839C1.30321 13.4839 1.05191 13.377 0.836738 13.1633C0.622988 12.9495 0.516113 12.7001 0.516113 12.4151C0.516113 12.1301 0.622988 11.8808 0.836738 11.667L5.50361 7.00013L0.836738 2.38063C0.622988 2.16524 0.516113 1.9138 0.516113 1.62645C0.516113 1.3391 0.622988 1.0878 0.836738 0.872627C1.05049 0.658877 1.29986 0.552002 1.58486 0.552002C1.86986 0.552002 2.11924 0.658877 2.33299 0.872627L6.99986 5.5395L11.6194 0.872627C11.811 0.658877 12.0565 0.552002 12.3557 0.552002C12.655 0.552002 12.9122 0.658877 13.1274 0.872627C13.3411 1.08638 13.448 1.33575 13.448 1.62075C13.448 1.90575 13.3411 2.15513 13.1274 2.36888L8.46049 7.00013L13.1274 11.6552C13.3411 11.8706 13.448 12.1221 13.448 12.4094C13.448 12.6968 13.3411 12.9481 13.1274 13.1633C12.9136 13.377 12.6642 13.4839 12.3792 13.4839C12.0942 13.4839 11.8449 13.377 11.6311 13.1633L6.99986 8.49638Z"
+              fill="#98959D"
+            />
+          </svg>
+        </button>
+
         <header>
           <h1>Agende um atendimento</h1>
           <p>Preencha os dados do cliente para realizar o agendamento:</p>
         </header>
-        <form method="dialog">
+
+        <form>
           <fieldset>
             <div class="input-wrapper">
               <label for="name">Nome do tutor</label>
@@ -219,6 +200,7 @@
                 type="text"
                 id="name"
                 name="name"
+                maxlength="15"
                 placeholder="Insira seu nome aqui!"
               />
             </div>
@@ -229,16 +211,18 @@
                 type="text"
                 id="petName"
                 name="petName"
+                maxlength="15"
                 placeholder="Insira o nome de seu pet aqui!"
               />
             </div>
 
             <div class="input-wrapper">
-              <label for="name">Telefone</label>
+              <label for="tel">Telefone</label>
               <input
                 type="tel"
                 id="tel"
                 name="tel"
+                maxlength="15"
                 placeholder="(00) 00000-0000"
               />
             </div>
@@ -259,19 +243,23 @@
           <fieldset>
             <div class="data-wrapper">
               <label for="date">Data</label>
-              <input type="date" id="date" name="date" />
-            </div>
-
-            <div class="data-wrapper">
-              <label for="time">Hora</label>
-              <input type="time" id="time" name="time" />
+              <input type="date" id="date" name="date" min="2023-12-31" max="2050-12-31" required/>
+              <label class="dropdown" for="date"></label>
             </div>
           </fieldset>
-        </form>
 
-        <div class="button-wrapper">
-        <button id="schedule">Agendar</button>
-        </div>
+          <fieldset>
+            <div class="select-wrapper">
+              <label for="time">Horário</label>
+              <select name="time" id="time" required></select>
+              <label class="dropdown" for="time"></label>
+            </div>
+          </fieldset>
+
+          <div class="button-wrapper">
+            <button type="submit" id="schedule">Agendar</button>
+          </div>
+        </form>
       </dialog>
     </main>
 
@@ -279,4 +267,6 @@
       <button id="newSchedule">Novo Agendamento</button>
     </footer>
   </body>
+
+  <script type="module" src="./src/main.js"></script>
 </html>

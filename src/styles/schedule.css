@@ -41,6 +41,19 @@
       border-bottom: 1px solid var(--border-divisor);
       padding-bottom: 1rem;
 
+      & .customersServed {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration-color: var(--content-brand);
+        text-decoration-line: line-through;
+        text-decoration-thickness: 2px;
+
+        font: var(--p-sm);
+        color: var(--content-tertiary);
+      }
+
       & .scheduledClients {
         display: flex;
         flex-wrap: wrap;
